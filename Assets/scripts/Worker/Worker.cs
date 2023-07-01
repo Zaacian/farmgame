@@ -10,7 +10,7 @@ using UnityEngine.AI;
     Plow,
     Sow,
     Water,
-    Harvester
+    Harvest
 }
     public enum Gender
 {
