@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class CameraController : MonoBehaviour
 {
@@ -16,6 +15,7 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private float rotationAmount;
     [SerializeField] private Quaternion newRotation;
+
 
     private Camera cam;
 
@@ -33,9 +33,9 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Rotate();
         Zoom();
         MoveByKB();
+        Rotate();
     }
     private void Zoom()
     {
@@ -62,31 +62,21 @@ public class CameraController : MonoBehaviour
 
         Vector3 dir = transform.forward * zInput + transform.right* xInput;
         transform.position += dir * moveSpeed * Time.deltaTime;
-        transform.position = Clamp(Corner1.position, Corner2.position);
-
-    }
-    private Vector3 Clamp(Vector3 lowerLeft, Vector3 topRight)
-    {
-        Vector3 pos = new Vector3(Mathf.Clamp(transform.position.x, lowerLeft.x, topRight.x),
-            transform.position.y,
-            
-           Mathf.Clamp (transform.position.z,lowerLeft.z, topRight.z));
-        return pos;
     }
     private void Rotate()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if(Input.GetKey(KeyCode.Q))
             newRotation *= Quaternion.Euler(Vector3.up * rotationAmount);
 
         if (Input.GetKey(KeyCode.E))
             newRotation *= Quaternion.Euler(Vector3.up * -rotationAmount);
 
-        if (Input.GetKey(KeyCode.Home))
+        if (Input.GetKey(KeyCode.O))
         {
-            Debug.Log(1);    newRotation = Quaternion.identity;
-            return;
+            newRotation = Quaternion.identity;
+        return; 
         }
+
         transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, Time.deltaTime * moveSpeed);
     }
-
 }
