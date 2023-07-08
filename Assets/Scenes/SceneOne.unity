@@ -1667,7 +1667,7 @@ GameObject:
   - component: {fileID: 536443446}
   - component: {fileID: 536443445}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: WheatButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1737,7 +1737,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 536443446}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1094730121}
+        m_TargetAssemblyTypeName: StructureManager, Assembly-CSharp
+        m_MethodName: BeginNewBuildingPlacement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5038900826472829213, guid: 5c51d33afe24ad244916ac702b6cd7fd, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &536443446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3631,6 +3643,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087439578}
   m_CullTransparentMesh: 1
+--- !u!1 &1094730119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1094730120}
+  - component: {fileID: 1094730123}
+  - component: {fileID: 1094730122}
+  - component: {fileID: 1094730121}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1094730120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094730119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 144.58154, y: -5.5645313, z: -8.769823}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1094730121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094730119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c32083315f5e3340a79f8684abfc622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isConstructing: 0
+  isDemolishing: 0
+  curBuildingPrefab: {fileID: 0}
+  buildingParent: {fileID: 0}
+  curCursorPos: {x: 0, y: 0, z: 0}
+  buildingCursor: {fileID: 0}
+  gridPlane: {fileID: 2005003488}
+  _curStructure: {fileID: 0}
+  structurePrefab: []
+--- !u!114 &1094730122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094730119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3901147d50318458d07ec7a0fe28b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1094730123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094730119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 206dce618191b79438c1664dec0607e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1127536002
 GameObject:
   m_ObjectHideFlags: 0
