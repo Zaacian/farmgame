@@ -555,6 +555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2540254711645412066}
   - component: {fileID: 5178608449102025627}
+  - component: {fileID: 9109920392655053578}
   - component: {fileID: 5006467489047259483}
   - component: {fileID: 5812061017764358918}
   m_Layer: 0
@@ -607,6 +608,20 @@ MonoBehaviour:
   produceTimer: 0
   FarmUI: {fileID: 0}
   currentWorkers: []
+--- !u!114 &9109920392655053578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5038900826472829213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c963051a237ba4c9abd29c08b68500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBuild: 0
+  plane: {fileID: 4751845385488581123}
 --- !u!65 &5006467489047259483
 BoxCollider:
   m_ObjectHideFlags: 0
