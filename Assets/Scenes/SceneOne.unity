@@ -1831,6 +1831,7 @@ GameObject:
   - component: {fileID: 538830553}
   - component: {fileID: 538830552}
   - component: {fileID: 538830551}
+  - component: {fileID: 538830555}
   m_Layer: 5
   m_Name: MainUi
   m_TagString: Untagged
@@ -1921,6 +1922,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &538830555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538830550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59af171ce065aa44fa397b74c916856b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 1525438721}
+  staffText: {fileID: 1587522779}
+  wheatText: {fileID: 37669502}
+  melonText: {fileID: 1395862488}
+  cornText: {fileID: 1607072707}
+  milkText: {fileID: 1303096254}
+  appleText: {fileID: 758231071}
+  dayText: {fileID: 392500445}
 --- !u!1 &578956013
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,6 +3904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1133618680}
+  - component: {fileID: 1133618681}
   m_Layer: 0
   m_Name: Office
   m_TagString: Untagged
@@ -3903,9 +3925,36 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 278521860}
+  - {fileID: 1395097906}
+  - {fileID: 1765682393}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1133618681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133618679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b49432bf36420419cfe0a152e54feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 10000
+  workers: []
+  wheat: 0
+  melon: 0
+  corn: 0
+  milk: 0
+  apple: 0
+  dailyCostWages: 0
+  structures: []
+  availStaff: 0
+  staffParent: {fileID: 278521859}
+  spawnPosition: {fileID: 1395097905}
+  rallyPosition: {fileID: 1765682392}
 --- !u!1 &1209613430
 GameObject:
   m_ObjectHideFlags: 0
@@ -4461,6 +4510,37 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1395097905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1395097906}
+  m_Layer: 0
+  m_Name: SpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1395097906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395097905}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1133618680}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1395862486
 GameObject:
   m_ObjectHideFlags: 0
@@ -5508,6 +5588,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737346815}
   m_CullTransparentMesh: 1
+--- !u!1 &1765682392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765682393}
+  m_Layer: 0
+  m_Name: RallyPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1765682393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765682392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1133618680}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1774717996
 GameObject:
   m_ObjectHideFlags: 0

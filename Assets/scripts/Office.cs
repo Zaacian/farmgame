@@ -70,7 +70,7 @@ public class Office : MonoBehaviour
         AddStaff(w);
 
         //Update UI
-        
+        MainUI.instance.UpdateResourceUI();
 
         return true;
     }
