@@ -28,6 +28,8 @@ public abstract class Structure : MonoBehaviour
     [SerializeField] private int id;
     public int ID { get { return id; } set { id = value; } }
 
+
+
     // Start is called before the first frame update
     void Start()
     {
