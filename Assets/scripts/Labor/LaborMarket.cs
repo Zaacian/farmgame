@@ -28,6 +28,8 @@ public class LaborMarket : MonoBehaviour
                                     "Ramona", "Katelyn", "Tiana", "Sunny",
                                     "Lillie", "Greta", "Kelly", "Hana"};
 
+
+
     public static LaborMarket instance;
 
     // Start is called before the first frame update
