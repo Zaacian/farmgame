@@ -15,6 +15,7 @@ public class MainUI : MonoBehaviour
 
     [SerializeField] private TMP_Text dayText;
 
+
     public GameObject laborMarketPanel;
 
     public static MainUI instance;

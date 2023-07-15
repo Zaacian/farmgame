@@ -1252,6 +1252,7 @@ MonoBehaviour:
   staffGender: 0
   hired: 0
   state: 0
+  targetStructure: {fileID: 0}
 --- !u!195 &5806664067697915719
 NavMeshAgent:
   m_ObjectHideFlags: 0
