@@ -94,6 +94,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b78fe6f9accf5449ea8af0f999dfdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  profilePic: {fileID: 8603448981521386865}
+  candidateName: {fileID: 7986164245638487691}
+  idText: {fileID: 6313739805282523345}
+  wage: {fileID: 5421785669684098293}
+  HireButton: {fileID: 8777921081962569639}
+  FireButton: {fileID: 0}
 --- !u!1 &2907081589044826537
 GameObject:
   m_ObjectHideFlags: 0
