@@ -81,7 +81,8 @@ public class Farm : Structure
         if ((hp >= 100) && (stage == FarmStage.harvesting))
         {
             //harvest
-            Debug.Log("Harvest +1000");
+            HarvestResult();
+            //Debug.Log("Harvest +1000");
 
             hp = 1;
             stage = FarmStage.sowing;
@@ -106,6 +107,23 @@ public class Farm : Structure
             Working();
         }
     }
+    public void HarvestResult()
+    {
+        switch (structureType)
+        {
+            case StructureType.wheat:
+                {
+                    Office.instance.Wheat += 1000;
+                    break;
+                }
+            case StructureType.melon:
+                {
+                    Office.instance.Melon += 1000;
+                    break;
+                }
+        }
 
+        MainUI.instance.UpdateResourceUI();
+    }
 
 }
