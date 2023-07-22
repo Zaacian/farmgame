@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b663ce03d4fc2b04ab90fbe70217782a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureType: 2
+  structureType: 3
   functional: 0
   structureName: Melon Farm
   hp: 1
