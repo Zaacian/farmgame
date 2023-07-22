@@ -597,7 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   structureType: 2
   functional: 0
-  structureName: 
+  structureName: Wheat Farm
   hp: 1
   costToBuild: 1800
   id: 1
