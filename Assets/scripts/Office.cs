@@ -157,7 +157,9 @@ public class Office : MonoBehaviour
                 f.CurrentWorkers.Remove(w); //Remove from this farm
         }
 
+       
         w.TargetStructure = null; //Quit working
+        w.DisableAllTools();
         w.SetToWalk(spawnPosition.transform.position);
 
         FireStaff(w);
