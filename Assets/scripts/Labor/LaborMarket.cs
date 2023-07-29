@@ -54,6 +54,8 @@ public class LaborMarket : MonoBehaviour
 
             w.StaffName = SetName(w);
             w.DailyWage = Random.Range(80, 120);
+            w.ChangeCharSkin();
+            w.SetToWalk(Office.instance.SpawnPosition.transform.position);
 
             laborInMarket.Add(staffObj);
 
