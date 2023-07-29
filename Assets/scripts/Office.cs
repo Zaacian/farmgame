@@ -136,5 +136,35 @@ public class Office : MonoBehaviour
 
         UpdateAvailStaff();
     }
+    public void FireStaff(Worker w)
+    {
+        workers.Remove(w);
+        dailyCostWages -= w.DailyWage;
+    }
+    public bool ToFireStaff(GameObject staffObj)
+    {
+        staffObj.transform.parent = LaborMarket.instance.WorkerParent.transform;
+        //move Staff obj back to Labor Market
+
+        Worker w = staffObj.GetComponent<Worker>();
+
+        w.Hired = false; //Fire this staff
+
+        if (w.TargetStructure != null)
+        {
+            Farm f = w.TargetStructure.GetComponent<Farm>();
+            if (f != null)
+                f.CurrentWorkers.Remove(w); //Remove from this farm
+        }
+
+        w.TargetStructure = null; //Quit working
+        w.SetToWalk(spawnPosition.transform.position);
+
+        FireStaff(w);
+        MainUI.instance.UpdateResourceUI();
+
+        return true;
+    }
+
 
 }
