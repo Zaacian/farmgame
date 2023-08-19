@@ -131,7 +131,7 @@ public class Worker : Unit
         }
     }
 
-    private void DisableAllTools()
+    public void DisableAllTools()
     {
 
         for (int i = 0; i < tools.Length; i++)
