@@ -172,7 +172,7 @@ public class Office : MonoBehaviour
 
        
         w.TargetStructure = null; //Quit working
-        w.DisableAllTools();
+        //w.DisableAllTools();
         w.SetToWalk(spawnPosition.transform.position);
 
         FireStaff(w);
