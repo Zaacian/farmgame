@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 5782167356980314563}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,10 +149,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   structureType: 0
   functional: 0
-  structureName: 
-  hp: 0
-  costToBuild: 0
+  structureName: Road
+  hp: 1
+  costToBuild: 20
   id: 0
+  roadGreenTilePrefab: {fileID: 0}
+  roadGreenTileParent: {fileID: 0}
+  startRoadPos: {x: 0, y: 0, z: 0}
+  endRoadPos: {x: 0, y: 0, z: 0}
+  roadGreenTilesList: []
 --- !u!114 &1374890483662565992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +197,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -206,6 +211,10 @@ PrefabInstance:
     - target: {fileID: 1490808127965600, guid: 635f5383c50fcf741b741fd7579d47a0, type: 3}
       propertyPath: m_Name
       value: SM_Env_Road_Gravel_Straight_01 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490808127965600, guid: 635f5383c50fcf741b741fd7579d47a0, type: 3}
+      propertyPath: m_TagString
+      value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 4935090403292066, guid: 635f5383c50fcf741b741fd7579d47a0, type: 3}
       propertyPath: m_RootOrder
