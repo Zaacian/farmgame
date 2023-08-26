@@ -35,6 +35,12 @@ public class EnemyController : MonoBehaviour
             case UnitState.AttackBuilding:
                 anim.SetBool("isAttack", true);
                 break;
+            case UnitState.AttackUnit:
+                anim.SetBool("isAttack", true);
+                break;
+            case UnitState.Death:
+                anim.SetBool("isDeath", true);
+                break;
         }
     }
 
