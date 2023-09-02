@@ -54,8 +54,8 @@ public class Turret : Structure
 
             float dist = Vector3.Distance(transform.position, targetUnit.transform.position);
 
-            //if (dist <= shootRange)
-               // u.TakeDamage(this);
+            if (dist <= shootRange)
+                u.TakeDamage(this);
         }
         else //No enemy to attack
         {

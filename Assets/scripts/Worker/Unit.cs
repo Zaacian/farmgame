@@ -245,6 +245,24 @@ public abstract class Unit : MonoBehaviour
             Destroy(gameObject);
     }
 
+    public void TakeDamage(Turret attacker)
+    {
+        CheckSelfDefence(attacker);
+
+        hp -= attacker.ShootDamage;
+        if (hp <= 0)
+            Destroy(gameObject);
+    }
+
+    public void CheckSelfDefence(Turret t)
+    {
+        if (t.gameObject != null)
+        {
+            targetUnit = t.gameObject;
+            state = UnitState.MoveToAttackUnit;
+        }
+    }
+
 
 }
 
