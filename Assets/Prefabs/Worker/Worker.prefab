@@ -1173,9 +1173,9 @@ GameObject:
   - component: {fileID: 5806664067697915719}
   - component: {fileID: 5409277377461194664}
   - component: {fileID: 7771888603274847897}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Worker
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1233,6 +1233,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53948ee9f577fde45bc23b2f472522c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 100
+  state: 0
+  targetStructure: {fileID: 0}
+  detectRange: 50
+  attackRange: 2
+  attackPower: 5
+  CheckStateTimer: 0
+  CheckStateTimeWait: 0.5
+  tools:
+  - {fileID: 5458816720640597794}
+  - {fileID: 788921910666962322}
+  - {fileID: 2204588372426541270}
+  weapon: {fileID: 0}
   id: 0
   charSkinID: 0
   charSkin:
@@ -1252,12 +1265,6 @@ MonoBehaviour:
   dailyWage: 0
   staffGender: 0
   hired: 0
-  state: 0
-  targetStructure: {fileID: 0}
-  tools:
-  - {fileID: 5458816720640597794}
-  - {fileID: 788921910666962322}
-  - {fileID: 2204588372426541270}
 --- !u!195 &5806664067697915719
 NavMeshAgent:
   m_ObjectHideFlags: 0
