@@ -98,6 +98,13 @@ public abstract class Unit : MonoBehaviour
             case UnitState.AttackBuilding:
                 AttackBuilding();
                 break;
+            case UnitState.MoveToAttackUnit:
+                MoveToAttackUnit();
+                break;
+            case UnitState.AttackUnit:
+                AttackUnit();
+                break;
+
         }
     }
 
@@ -212,10 +219,31 @@ public abstract class Unit : MonoBehaviour
             LookAt(targetUnit.transform.position);
 
             Unit u = targetUnit.GetComponent<Unit>();
-            u.TakeDamage(attackPower);
+            u.TakeDamage(this);
+        }
+        else
+        {
+            targetUnit =null;
+            state = UnitState.Idle;
+        }
+    }
+    public void CheckSelfDefence(Unit u)
+    {
+        if (u.gameObject != null)
+        {
+            targetUnit = u.gameObject;
+            state = UnitState.MoveToAttackUnit;
         }
     }
 
+    public void TakeDamage(Unit attacker)
+    {
+        CheckSelfDefence(attacker);
+
+        hp -= attacker.AttackPower;
+        if (hp <= 0)
+            Destroy(gameObject);
+    }
 
 
 }
