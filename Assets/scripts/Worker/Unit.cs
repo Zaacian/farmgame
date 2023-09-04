@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public enum UnitState
 {
@@ -59,6 +60,8 @@ public abstract class Unit : MonoBehaviour
     [SerializeField] protected GameObject weapon;
     [SerializeField] protected GameObject targetUnit;
     public GameObject TargetUnit { get { return targetUnit; } set { targetUnit = value; } }
+
+    public UnityEvent<UnitState> onStateChange;
 
     void Awake()
     {
@@ -264,6 +267,14 @@ public abstract class Unit : MonoBehaviour
             targetUnit = t.gameObject;
             state = UnitState.MoveToAttackUnit;
         }
+    }
+
+    public void SetUnitState(UnitState s)
+    {
+        if (onStateChange != null) //if there is an icon
+            onStateChange.Invoke(s);
+
+        state = s;
     }
 
 

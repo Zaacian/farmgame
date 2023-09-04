@@ -134,6 +134,7 @@ public class Worker : Unit
                     state = UnitState.Harvest;
                     farm.CheckTimeForWork();
                     break;
+
             }
         }
 
@@ -199,7 +200,7 @@ public class Worker : Unit
         if (Vector3.Distance(transform.position, navAgent.destination) <= 1f)
         {
             LookAt(navAgent.destination);
-            state = UnitState.Mining;
+            SetUnitState(UnitState.Mining);
         }
     }
 
