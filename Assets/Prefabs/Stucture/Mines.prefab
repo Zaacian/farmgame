@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4337414085019224672}
   - component: {fileID: 580960952005621737}
   - component: {fileID: 2786873322325206975}
-  m_Layer: 0
-  m_Name: Mine
-  m_TagString: Untagged
+  m_Layer: 7
+  m_Name: Mines
+  m_TagString: Mine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
