@@ -70,10 +70,7 @@ public class Worker : Unit
     }
 
     // Update is called once per frame
-     protected virtual void Update()
-    {
-        CheckStaffState();
-    }
+    
 
     public void InitiateCharID(int i)
     {

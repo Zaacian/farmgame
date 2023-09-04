@@ -1642,7 +1642,7 @@ GameObject:
   - component: {fileID: 382890928}
   - component: {fileID: 382890927}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Mines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1712,7 +1712,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 382890928}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1094730121}
+        m_TargetAssemblyTypeName: StructureManager, Assembly-CSharp
+        m_MethodName: BeginNewBuildingPlacement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3936688275492340377, guid: 4bfcdbe1460f97d45a770295463d785d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &382890928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4079,7 +4091,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1094730121}
         m_TargetAssemblyTypeName: StructureManager, Assembly-CSharp
-        m_MethodName: CallStaff
+        m_MethodName: CallWorker
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5039,6 +5051,7 @@ MonoBehaviour:
   corn: 0
   milk: 0
   apple: 0
+  stone: 0
   dailyCostWages: 0
   structures: []
   availStaff: 0
@@ -7809,7 +7822,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Mines
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
