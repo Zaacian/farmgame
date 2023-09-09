@@ -135,6 +135,7 @@ public class Worker : Unit
                     farm.CheckTimeForWork();
                     break;
 
+
             }
         }
 
@@ -303,6 +304,7 @@ public class Worker : Unit
                 break;
             case UnitState.Mining:
                 MiningUpdate();
+                EquipTool(3);
                 break;
             case UnitState.MoveToDeliver:
                 MoveToDeliverUpdate();

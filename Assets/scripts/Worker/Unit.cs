@@ -210,7 +210,7 @@ public abstract class Unit : MonoBehaviour
         distance = Vector3.Distance(transform.position, targetUnit.transform.position);
 
         if (distance <= attackRange)
-            state = UnitState.AttackUnit;
+            SetUnitState(UnitState.AttackUnit);
     }
 
     protected void AttackUnit()
@@ -238,7 +238,7 @@ public abstract class Unit : MonoBehaviour
         if (u.gameObject != null)
         {
             targetUnit = u.gameObject;
-            state = UnitState.MoveToAttackUnit;
+            SetUnitState(UnitState.MoveToAttackUnit);
         }
     }
 
@@ -265,7 +265,7 @@ public abstract class Unit : MonoBehaviour
         if (t.gameObject != null)
         {
             targetUnit = t.gameObject;
-            state = UnitState.MoveToAttackUnit;
+            SetUnitState(UnitState.MoveToAttackUnit);
         }
     }
 
