@@ -116,22 +116,22 @@ public class Worker : Unit
             switch (farm.Stage)
             {
                 case FarmStage.plowing:
-                    state = UnitState.Plow;
+                    SetUnitState(UnitState.Plow);                   
                     EquipTool(0); //Hoe
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.sowing:
-                    state = UnitState.Sow;
+                    SetUnitState(UnitState.Sow);
                     EquipTool(1); //Sack
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.maintaining:
-                    state = UnitState.Water;
+                    SetUnitState(UnitState.Water);
                     EquipTool(2); //Watering Can
                     farm.CheckTimeForWork();
                     break;
                 case FarmStage.harvesting:
-                    state = UnitState.Harvest;
+                    SetUnitState(UnitState.Harvest);
                     farm.CheckTimeForWork();
                     break;
 
@@ -142,7 +142,7 @@ public class Worker : Unit
             if ((other.tag == "Mine") && (mine != null) && (mine.HP < 100)) 
             {
                 LookAt(targetMine.transform.position);
-                state = UnitState.Mining;
+            SetUnitState(UnitState.Mining);
             }
 
     }
@@ -173,12 +173,12 @@ public class Worker : Unit
         if (mine == null)
         {
             targetMine = null;
-            state = UnitState.MoveToDeliver;
+            SetUnitState(UnitState.MoveToDeliver);
             navAgent.SetDestination(targetStructure.transform.position);
         }
         else
         {
-            state = UnitState.MoveToMining;
+            SetUnitState(UnitState.MoveToMining);
             navAgent.SetDestination(mine.transform.position);
         }
         navAgent.isStopped = false;
@@ -236,7 +236,7 @@ public class Worker : Unit
             }
             else //Move to deliver at HQ
             {
-                state = UnitState.MoveToDeliver;
+                SetUnitState(UnitState.MoveToDeliver);         
                 navAgent.SetDestination(targetStructure.transform.position);
                 navAgent.isStopped = false;
             }
@@ -247,7 +247,7 @@ public class Worker : Unit
     {
         if (targetStructure == null)
         {
-            state = UnitState.Idle;
+            SetUnitState(UnitState.Idle);
             return;
         }
 
@@ -256,8 +256,7 @@ public class Worker : Unit
 
         if (Vector3.Distance(transform.position, targetStructure.transform.position) <= 5f)
         {
-            state = UnitState.Deliver;
-
+            SetUnitState(UnitState.Deliver);
             navAgent.isStopped = true;
         }
     }
@@ -267,7 +266,7 @@ public class Worker : Unit
         //This unit stops when there is no target resource to go back and he has nothing to deliver
         if (targetStructure == null)
         {
-            state = UnitState.Idle;
+            SetUnitState(UnitState.Idle);
             return;
         }
 
@@ -290,7 +289,7 @@ public class Worker : Unit
             else
             {
                 targetStructure = null;
-                state = UnitState.Idle;
+                SetUnitState(UnitState.Idle);
                 navAgent.isStopped = true;
             }
         }

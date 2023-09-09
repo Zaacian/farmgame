@@ -2774,6 +2774,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4596640331168922}
     m_Modifications:
+    - target: {fileID: -2268486118065410824, guid: ca5919e43d38ab048bdddc8566c149be, type: 3}
+      propertyPath: sowingState
+      value: 
+      objectReference: {fileID: 33957270, guid: 1edc63f79774aeb429a5065c0a6d30b3, type: 3}
+    - target: {fileID: -2268486118065410824, guid: ca5919e43d38ab048bdddc8566c149be, type: 3}
+      propertyPath: plowingState
+      value: 
+      objectReference: {fileID: -1196509142, guid: 1edc63f79774aeb429a5065c0a6d30b3, type: 3}
+    - target: {fileID: -2268486118065410824, guid: ca5919e43d38ab048bdddc8566c149be, type: 3}
+      propertyPath: wateringState
+      value: 
+      objectReference: {fileID: 1939248072, guid: 218be65c985d8f24b8cfe75b0956a075, type: 3}
+    - target: {fileID: -2268486118065410824, guid: ca5919e43d38ab048bdddc8566c149be, type: 3}
+      propertyPath: harvestingState
+      value: 
+      objectReference: {fileID: 290994301, guid: 1edc63f79774aeb429a5065c0a6d30b3, type: 3}
     - target: {fileID: 389024706595442061, guid: ca5919e43d38ab048bdddc8566c149be, type: 3}
       propertyPath: m_Name
       value: UnitUI
@@ -2872,6 +2888,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2397590210709291021, guid: ca5919e43d38ab048bdddc8566c149be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509946029455071796, guid: ca5919e43d38ab048bdddc8566c149be, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156950321297005140, guid: ca5919e43d38ab048bdddc8566c149be, type: 3}
