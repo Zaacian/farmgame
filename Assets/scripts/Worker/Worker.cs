@@ -132,6 +132,7 @@ public class Worker : Unit
                     break;
                 case FarmStage.harvesting:
                     SetUnitState(UnitState.Harvest);
+                    DisableAllTools();
                     farm.CheckTimeForWork();
                     break;
 
