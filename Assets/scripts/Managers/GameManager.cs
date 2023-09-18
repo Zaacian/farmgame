@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
             dayTimer = 0f;
             day++;
             MainUI.instance.UpdateDayText();
+            TechManager.instance.CheckAllResearch();
+            MainUI.instance.UpdateTechBtns();
         }
     }
 

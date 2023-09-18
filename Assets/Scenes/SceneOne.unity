@@ -5930,7 +5930,8 @@ MonoBehaviour:
   corn: 0
   milk: 0
   apple: 0
-  stone: 0
+  stone: 5000
+  wood: 4500
   dailyCostWages: 0
   structures: []
   availStaff: 0
