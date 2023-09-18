@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int day = 0;
     public int Day { get { return day; } set { day = value; } }
 
+    [SerializeField] private float dayTimer = 0f;
+    [SerializeField] private float secondsPerDay = 5f;
+
     private void Awake()
     {
         instance = this;
@@ -24,6 +27,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CheakTimeForDay();
     }
+
+    private void CheakTimeForDay()
+    {
+        dayTimer += Time.deltaTime;
+
+        if (dayTimer > secondsPerDay )
+        {
+            dayTimer = 0f;
+            day++;
+            MainUI.instance.UpdateDayText();
+        }
+    }
+
 }

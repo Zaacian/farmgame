@@ -25,6 +25,8 @@ public class Office : MonoBehaviour
     [SerializeField] private int stone;
     public int Stone { get {  return stone; } set {  stone = value; } }
 
+    public int Wood { get { return Wood; } set { Wood = value; } }
+
     [SerializeField] private int dailyCostWages;
 
     [SerializeField] private List<Structure> structures = new List<Structure>();
