@@ -34,6 +34,8 @@ public class StructureManager : MonoBehaviour
     [SerializeField] private Vector3 endRoadPos;
     [SerializeField] private List<GameObject> roadGreenTilesList = new List<GameObject>();
 
+    public AudioSource ClickSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -85,6 +87,7 @@ public class StructureManager : MonoBehaviour
 
         buildingCursor = ghostBuilding;
         buildingCursor.SetActive(true);
+        ClickSound.Play();
     }
     private void PlaceBuilding()
     {
