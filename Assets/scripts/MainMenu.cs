@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour
     }
     public void ExitScence()
     {
+        Application.Quit();
         ClickSound.Play();
     }
 }
