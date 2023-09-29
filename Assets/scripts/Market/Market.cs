@@ -6,6 +6,7 @@ public class Market : MonoBehaviour
 {
     [SerializeField] private int _curPriceWheat;
     [SerializeField] private int _curPriceMelon;
+    public AudioSource ClickSound;
 
     public void SellWheat()
     {
@@ -26,6 +27,7 @@ public class Market : MonoBehaviour
     {
         SellWheat();
         SellMelon();
+        ClickSound.Play();
     }
 // Start is called before the first frame update
 void Start()

@@ -204,6 +204,7 @@ public class StructureManager : MonoBehaviour
 
         gridPlane.SetActive(isDemolishing);
         demolishCursor.SetActive(isDemolishing);
+        ClickSound.Play();
     }
     private void GenGreenTile(Vector3 pos)
     {

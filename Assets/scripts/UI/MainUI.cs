@@ -37,6 +37,8 @@ public class MainUI : MonoBehaviour
     [SerializeField] private Button[] techBtns;
     [SerializeField] private TMP_Text[] techTexts;
 
+    public AudioSource ClickSound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +66,7 @@ public class MainUI : MonoBehaviour
             laborMarketPanel.SetActive(true);
         else
             laborMarketPanel.SetActive(false);
+        ClickSound.Play();
     }
 
     public void ToggleFarmPanel()
@@ -72,6 +75,7 @@ public class MainUI : MonoBehaviour
             farmPanel.SetActive(true);
         else
             farmPanel.SetActive(false);
+        ClickSound.Play();
     }
     public void ToggleWarehousePanel()
     {
@@ -79,6 +83,7 @@ public class MainUI : MonoBehaviour
             warehousePanel.SetActive(true);
         else
             warehousePanel.SetActive(false);
+        ClickSound.Play();
     }
 
     public void UpdateDayText()
@@ -92,6 +97,7 @@ public class MainUI : MonoBehaviour
             techPanel.SetActive(true);
         else
             techPanel.SetActive(false);
+        ClickSound.Play();
     }
 
     public void ClickResearchTech(int i)
@@ -101,6 +107,7 @@ public class MainUI : MonoBehaviour
             UpdateResourceUI();
             techBtns[i].interactable = false;
             techTexts[i].text = "In Progress";
+            ClickSound.Play();
         }
     }
 
@@ -108,7 +115,7 @@ public class MainUI : MonoBehaviour
     {
         for (int i = 0; i < techBtns.Length; i++)
         {
-            techBtns[i].image.sprite = TechManager.instance.TechSet[i].Icon;
+           techBtns[i].image.sprite = TechManager.instance.TechSet[i].Icon;
 
         }
     }
